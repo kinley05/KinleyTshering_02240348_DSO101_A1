@@ -14,6 +14,8 @@ KinleyTshering_02240348_DSO101_A1
  -----backend
       ----src
           ----app.js
+      ----tests
+          ----todo.test.js
       ----package.json
       ----Dockerfile
       ----.env.production
@@ -22,6 +24,7 @@ KinleyTshering_02240348_DSO101_A1
        ----Dockerfile
        ----.env.production
  ------.gitignore
+ ------Jenkinsfile
  ------render.yaml
  ------README.md
 
