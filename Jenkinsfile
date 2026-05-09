@@ -8,7 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    credentialsId: 'github-creds',
+                    credentialsId: 'kinley',
                     url: 'https://github.com/kinley05/KinleyTshering_02240348_DSO101_A1.git'
             }
         }
@@ -16,7 +16,7 @@ pipeline {
         stage('Install') {
             steps {
                 dir('backend') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir('backend') {
-                    sh 'npm run build'
+                    bat 'npm run build'
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('backend') {
-                    sh 'npm test'
+                    bat 'npm test'
                 }
             }
             post {
